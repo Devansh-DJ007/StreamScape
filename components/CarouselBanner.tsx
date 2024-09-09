@@ -10,7 +10,7 @@ import getImagePath from "@/lib/getImagePath";
 Autoplay.globalOptions = { delay: 8000 };
 
 function CarouselBanner({ movies }: { movies: Movie[] }) {
-  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 100 }, [
+  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 0 }, [
     Autoplay(),
   ]);
 
@@ -40,7 +40,7 @@ function CarouselBanner({ movies }: { movies: Movie[] }) {
         ))}
       </div>
       <div
-        className="absolute inset-0 bg-gradient-to-b from-gray-200/0 via-gray-200/25 to-gray-300 dark:to-[#1A1C29]"
+        className="absolute inset-0 dark:bg-gradient-to-b dark:from-gray-200/0 dark:via-gray-200/15 dark:to-[#1A1C29]"
       />
     </div>
   );
